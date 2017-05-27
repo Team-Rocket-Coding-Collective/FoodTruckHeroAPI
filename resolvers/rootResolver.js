@@ -17,7 +17,10 @@ export const resolvers = {
     Query: {
         foodtrucks: () => {
             return MockFoodTrucks;
-        }
+        },
+        users: () => {
+            return MockUsers;
+        },
     }
 }
 

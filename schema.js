@@ -20,7 +20,13 @@ type FoodTruck {
 
 type Query {
     foodtrucks: [FoodTruck]
+    users: [User]
 }
+
+type Mutation {
+    addUser(name: String!, email: String!, userType: String!): User
+}
+
 `;
 
 const schema = makeExecutableSchema({ typeDefs, resolvers });

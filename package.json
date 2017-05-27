@@ -1,0 +1,29 @@
+{
+  "name": "foodtruck-hero-api",
+  "version": "1.0.0",
+  "description": "API for Food Truck Hero",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./server.js --exec babel-node -e js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Food Truck",
+    "Food Truck Hero API"
+  ],
+  "author": "psilospore",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "graphql": "^0.8.2",
+    "graphql-server-express": "^0.7.2",
+    "graphql-tools": "^0.11.0",
+    "express": "4.15.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "nodemon": "^1.11.0"
+  }
+}

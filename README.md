@@ -40,3 +40,6 @@ mutation {
 I plan on researching how I should handle this later but currently I'm just running ` psql -f tempScripts.sql example postgres` and if you look at connectors.js you might have an idea of how to set your local postgres instance.
 
 Maybe we should have a shared postgres instance on AWS or something.
+
+Currently executing script on heroku like this:
+heroku run  psql -f tempScripts.sql postgres://tjjdjzrggdgolj:06e102ab2fb18623097c511648943ac083bd1505aae9329c0e12b05e4352fc61@ec2-54-243-107-66.compute-1.amazonaws.com:5432/d16jsprr5kalak

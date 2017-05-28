@@ -1,12 +1,12 @@
 //TODO connect postgres
 
-const MockUsers = [{
+let MockUsers = [{
     name: "sta",
     email: "asfsf@gmail.com",
     userType: "Foodie"
 }];
 
-const MockFoodTrucks = [{
+let MockFoodTrucks = [{
     owner: MockUsers[0],
     name: "Hot Kabobs",
     latitude: 12.5,
@@ -21,6 +21,16 @@ export const resolvers = {
         users: () => {
             return MockUsers;
         },
+    },
+    Mutation: {
+        addUser: (root, args) => {
+            MockUsers.push({...args});
+            return [...MockUsers].pop();
+        },
+        // addFoodTruck: (root, args) => {
+        //     MockFoodTrucks.push({...args});
+        //     return MockFoodTrucks[-1];
+        // },
     }
 }
 

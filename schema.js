@@ -8,7 +8,6 @@ const typeDefs = `
 type User {
     name: String!
     email: String!
-    userType: String!
 }
 
 type FoodTruck {

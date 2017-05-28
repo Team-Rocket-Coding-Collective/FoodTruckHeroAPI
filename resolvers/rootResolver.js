@@ -1,4 +1,5 @@
-//TODO connect postgres
+import { User, FoodTruck } from '../connectors';
+// TODO get connects from context instead
 
 let MockUsers = [{
     name: "sta",
@@ -16,10 +17,10 @@ let MockFoodTrucks = [{
 export const resolvers = {
     Query: {
         foodtrucks: () => {
-            return MockFoodTrucks;
+            return FoodTruck.all();
         },
         users: () => {
-            return MockUsers;
+            return User.all(); 
         },
     },
     Mutation: {

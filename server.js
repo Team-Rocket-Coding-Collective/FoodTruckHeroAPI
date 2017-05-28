@@ -8,7 +8,7 @@ import bodyParser from 'body-parser';
 
 import { schema } from './schema.js';
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const server = express();
 
 server.use('/graphql', bodyParser.json(), graphqlExpress({

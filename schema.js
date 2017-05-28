@@ -23,7 +23,7 @@ type Query {
 }
 
 type Mutation {
-    addUser(name: String!, email: String!, userType: String!): User
+    addUser(name: String!, email: String!): User
 }
 
 `;

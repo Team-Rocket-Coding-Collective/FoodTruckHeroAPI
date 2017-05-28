@@ -28,10 +28,9 @@ query {
 
 ```
 mutation {
-  addUser(name: "syed", email: "agasf@fakemail.com", userType: "Owner") {
+  addUser(name: "syed", email: "agasf@fakemail.com") {
     name
     email
-    userType
   }
 }
 ```

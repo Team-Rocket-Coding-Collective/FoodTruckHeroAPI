@@ -8,14 +8,13 @@ const typeDefs = `
 type User {
     name: String!
     email: String!
-    userType: String!
 }
 
 type FoodTruck {
     owner: User!
     name: String!
-    latitude: Float!
-    longitude: Float!
+    latitude: Float
+    longitude: Float
 }
 
 type Query {
@@ -24,7 +23,7 @@ type Query {
 }
 
 type Mutation {
-    addUser(name: String!, email: String!, userType: String!): User
+    addUser(name: String!, email: String!, userType: String): User
 }
 
 `;

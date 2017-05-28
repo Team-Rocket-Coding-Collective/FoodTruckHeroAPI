@@ -1,0 +1,28 @@
+{  "development": {
+    "username": "postgres",
+    "password": "admin",
+    "database": "example",
+    "host": "localhost",
+    "port": "5432",
+    "dialect": "postgres",
+    "schema": "public",
+    "omitNull": true
+  },
+  "dev-heroku": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres",
+    "omitNull": true
+    
+  },
+  "test": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres",
+    "omitNull": true
+    
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres",
+    "omitNull": true    
+  }
+}

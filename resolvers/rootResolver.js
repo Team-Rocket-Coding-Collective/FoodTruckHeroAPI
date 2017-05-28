@@ -1,4 +1,4 @@
-import { User, FoodTruck } from '../connectors';
+import { User, FoodTruck } from '../models/index';
 // TODO get connects from context instead
 
 export const resolvers = {
@@ -12,8 +12,8 @@ export const resolvers = {
     },
     Mutation: {
         addUser: (root, args) => {
-            MockUsers.push({...args});
-            return [...MockUsers].pop();
+            console.log(args);
+            return User.create(args);
         },
         // addFoodTruck: (root, args) => {
         //     MockFoodTrucks.push({...args});

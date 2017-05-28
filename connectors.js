@@ -1,14 +1,12 @@
 import Sequalize from 'sequelize';
 import _ from 'lodash';
 
+// TODO consider deletion
+
 const dbOptions =  {
     dialect: 'postgres',
-    protocol: 'postgres',
     define: {
         schema: "public",
-        freezeTableName: true,
-        createdAt: "created_at",
-        updatedAt: "updated_at",
     },
 };
 
@@ -25,27 +23,4 @@ if (process.env.DATABASE_URL) {
     });
 }
 
-const UserModel = db.define('user', {
-    id: { type: Sequalize.INTEGER, primaryKey: true },
-    name: { type: Sequalize.INTEGER },
-    email: { type: Sequalize.STRING },
-});
-
-const FoodTruckModel = db.define('foodtruck', {
-    owner_id: { type: Sequalize.INTEGER },
-    name: { type: Sequalize.INTEGER },
-    latitude: { type: Sequalize.FLOAT },
-    longitude: { type: Sequalize.FLOAT },
-});
-
-UserModel.hasMany(FoodTruckModel, {
-    foreignKey: 'owner_id',
-});
-FoodTruckModel.belongsTo(UserModel, {
-    foreignKey: 'owner_id',
-});
-
-const User = db.models.user;
-const FoodTruck = db.models.foodtruck;
-
-export { User, FoodTruck };
+export { db };

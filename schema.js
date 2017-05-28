@@ -8,6 +8,7 @@ const typeDefs = `
 type User {
     name: String!
     email: String!
+    userType: String!
 }
 
 type FoodTruck {
@@ -23,7 +24,7 @@ type Query {
 }
 
 type Mutation {
-    addUser(name: String!, email: String!): User
+    addUser(name: String!, email: String!, userType: String!): User
 }
 
 `;

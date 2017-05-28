@@ -40,3 +40,10 @@ mutation {
 I have a shared postgres instance in heroku but it might be unstable for us to all use it at the same time. Not sure what the best solution is for developing locally.
 
 I'm currently running my own instance as you can see in connectors.js
+
+GraphQL Document: graphql script that defines one or more operations and fragments
+operation: a query, mutation, or subscription
+
+A field a unit of data you are asking for. ends up as a JSON response data.
+
+Arguments: key value pairs attached to a specific field. Passed into server side executation of this field and affects how it's resolved. 

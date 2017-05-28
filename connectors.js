@@ -38,8 +38,12 @@ const FoodTruckModel = db.define('foodtruck', {
     longitude: { type: Sequalize.FLOAT },
 });
 
-UserModel.hasMany(FoodTruckModel);
-FoodTruckModel.belongsTo(UserModel);
+UserModel.hasMany(FoodTruckModel, {
+    foreignKey: 'owner_id',
+});
+FoodTruckModel.belongsTo(UserModel, {
+    foreignKey: 'owner_id',
+});
 
 const User = db.models.user;
 const FoodTruck = db.models.foodtruck;

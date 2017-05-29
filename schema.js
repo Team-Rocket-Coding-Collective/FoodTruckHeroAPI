@@ -13,8 +13,8 @@ type User {
 type FoodTruck {
     owner: User!
     name: String!
-    latitude: Float
-    longitude: Float
+    latitude: Float!
+    longitude: Float!
 }
 
 type Query {

@@ -14,6 +14,6 @@ module.exports = {
   },
 
   down: function (queryInterface, Sequelize) {
-    return queryInterface.deleteColumn('FoodTrucks', 'ownerId');
+    return queryInterface.removeColumn('FoodTrucks', 'ownerId');
   }
 };

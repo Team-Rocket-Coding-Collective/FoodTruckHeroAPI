@@ -11,6 +11,12 @@ module.exports = function(sequelize, DataTypes) {
     email: { 
       type: DataTypes.STRING 
     },
+    latitude: {
+      type: DataTypes.FLOAT,
+    },
+    longitude: {
+      type: DataTypes.FLOAT,
+    }
   }, {
     classMethods: {
       associate: function(models) {

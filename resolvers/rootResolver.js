@@ -15,7 +15,12 @@ export const resolvers = {
             return User.create(args);
         },
         addFoodTruck: (root, args) => {
-            return FoodTruck.create(args);
+            const foodTruckPromise = FoodTruck.create(args);
+            // TODO try to preload owner
+            return foodTruckPromise.then((foodTruck) => foodTruck.getOwner().then(owner => {
+                foodTruck.owner = owner;
+                return foodTruck;
+            }));
         },
     }
 }

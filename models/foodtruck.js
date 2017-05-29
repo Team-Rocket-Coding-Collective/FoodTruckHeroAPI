@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        FoodTruck.belongsTo(models.User, { foreignKey: 'ownerId' });
+        FoodTruck.belongsTo(models.User, { foreignKey: 'ownerId', as: 'owner' });
       }
     }
   });

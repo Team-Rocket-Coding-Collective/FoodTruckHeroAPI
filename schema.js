@@ -8,6 +8,7 @@ const typeDefs = `
 type User {
     name: String!
     email: String!
+    foodtrucks: [FoodTruck]
 }
 
 type FoodTruck {

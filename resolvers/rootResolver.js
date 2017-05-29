@@ -3,11 +3,20 @@ import { User, FoodTruck } from '../models/index';
 
 export const resolvers = {
     Query: {
-        foodtrucks: () => {
-            return FoodTruck.all();
+        foodtrucks: (root, args, r, s) => {
+            return FoodTruck.findAll({
+                include: [
+                    {model: User, as: 'owner'}
+                ]
+            });
         },
         users: () => {
-            return User.all(); 
+            // TODO this should also return all the foodtrucks
+            return User.findAll({
+                include: [
+                    {model: FoodTruck, as: 'foodtrucks'}
+                ]
+            }); 
         },
     },
     Mutation: {

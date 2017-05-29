@@ -24,7 +24,7 @@ type Query {
 
 type Mutation {
     addUser(name: String!, email: String!, userType: String): User
-    addFoodTruck(name: String!, ownerId!: Int, latitude: Float, longitude: Float): FoodTruck
+    addFoodTruck(name: String!, ownerId: Int!, latitude: Float, longitude: Float): FoodTruck
 }
 
 `;

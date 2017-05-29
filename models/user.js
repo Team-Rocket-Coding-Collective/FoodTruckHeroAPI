@@ -9,7 +9,8 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER 
     },
     email: { 
-      type: DataTypes.STRING 
+      type: DataTypes.STRING,
+      // TODO when migration unique worksunique: true,
     },
   }, {
     classMethods: {

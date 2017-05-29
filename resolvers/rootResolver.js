@@ -12,13 +12,11 @@ export const resolvers = {
     },
     Mutation: {
         addUser: (root, args) => {
-            console.log(args);
             return User.create(args);
         },
-        // addFoodTruck: (root, args) => {
-        //     MockFoodTrucks.push({...args});
-        //     return MockFoodTrucks[-1];
-        // },
+        addFoodTruck: (root, args) => {
+            return FoodTruck.create(args);
+        },
     }
 }
 

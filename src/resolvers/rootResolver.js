@@ -1,4 +1,4 @@
-import { User, FoodTruck } from '../models/index';
+import { User, FoodTruck } from '../sequelize/models/index';
 // TODO get connects from context instead
 
 export const resolvers = {

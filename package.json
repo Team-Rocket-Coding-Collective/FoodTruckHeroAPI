@@ -4,7 +4,7 @@
   "description": "API for Food Truck Hero",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./server.js --exec babel-node -e js",
+    "start": "nodemon ./src/server.js --exec babel-node -e js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-prebuild": "node ./postinstall.js && npm install",
     "clear-db": "psql -f tempScripts.sql example postgres",

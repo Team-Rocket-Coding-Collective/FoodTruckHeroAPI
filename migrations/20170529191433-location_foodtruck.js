@@ -3,9 +3,9 @@
 module.exports = {
   up: function (queryInterface, Sequelize) {
     return queryInterface.sequelize.query("TRUNCATE \"FoodTrucks\";;").then(() => {
-      queryInterface.addColumn('FoodTrucks', 'latitude', {
-      type: Sequelize.FLOAT,
-      allowNull: false,
+      return queryInterface.addColumn('FoodTrucks', 'latitude', {
+        type: Sequelize.FLOAT,
+        allowNull: false,
     })
   }).then(
       () => {queryInterface.addColumn('FoodTrucks', 'longitude', {

@@ -12,10 +12,17 @@ type User {
 }
 
 type FoodTruck {
-    owner: User!
     name: String!
+    description: String    
     latitude: Float!
+    owner: User!    
     longitude: Float!
+    location: String
+    cusineTypes: [String]
+    diets: [String]
+    tags: [String]
+    website: String
+    twitter: String
 }
 
 type Query {
@@ -25,7 +32,7 @@ type Query {
 
 type Mutation {
     addUser(name: String!, email: String!, userType: String): User
-    addFoodTruck(name: String!, ownerId: Int!, latitude: Float, longitude: Float): FoodTruck
+    addFoodTruck(name: String!, ownerId: Int!, latitude: Float, longitude: Float, cusineTypes: [String], diets: [String], tags: [String], website: String, twitter: String): FoodTruck
 }
 
 `;

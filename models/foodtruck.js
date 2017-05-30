@@ -16,6 +16,27 @@ module.exports = function(sequelize, DataTypes) {
     },
     longitude: {
       type: DataTypes.FLOAT,
+    },
+    description: {
+      type: DataTypes.TEXT,
+    },
+    location: {
+      type: DataTypes.TEXT,
+    },
+    cusineTypes: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+    },
+    diets: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+    },
+    tags: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+    },
+    website: {
+      type: DataTypes.STRING,
+    },
+    twitter: {
+      type: DataTypes.STRING,
     }
   }, {
     classMethods: {

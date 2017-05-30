@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-prebuild": "node ./postinstall.js && npm install",
     "clear-db": "psql -f tempScripts.sql example postgres",
-    "build": "babel src/ -d lib/"
+    "build": "babel src/ -d lib/",
+    "flow": "flow"
   },
   "keywords": [
     "Food Truck",
@@ -31,6 +32,7 @@
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
+    "flow-bin": "^0.47.0",
     "nodemon": "^1.11.0"
   }
 }

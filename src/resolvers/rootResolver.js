@@ -1,16 +1,20 @@
+// @Flow
+
 import { User, FoodTruck } from '../sequelize/models/index';
+import type { UserType, FoodTruckType } from '../types';
+
 // TODO get connects from context instead
 
 export const resolvers = {
     Query: {
-        foodtrucks: (root, args, r, s) => {
+        foodtrucks: (): FoodTruckType => {
             return FoodTruck.findAll({
                 include: [
                     {model: User, as: 'owner'}
                 ]
             });
         },
-        users: () => {
+        users: (): UserType => {
             // TODO this should also return all the foodtrucks
             return User.findAll({
                 include: [
@@ -20,10 +24,10 @@ export const resolvers = {
         },
     },
     Mutation: {
-        addUser: (root, args) => {
+        addUser: (root, args): UserType=> {
             return User.create(args);
         },
-        addFoodTruck: (root, args) => {
+        addFoodTruck: (root, args): FoodTruckType => {
             const foodTruckPromise = FoodTruck.create(args);
             // TODO try to preload owner
             return foodTruckPromise.then((foodTruck) => foodTruck.getOwner().then(owner => {

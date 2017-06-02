@@ -24,7 +24,7 @@ export const resolvers = {
         },
     },
     Mutation: {
-        addUser: (root, args): UserType=> {
+        addUser: (root, args): UserType => {
             return User.create(args);
         },
         addFoodTruck: (root, args): FoodTruckType => {

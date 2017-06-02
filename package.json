@@ -7,7 +7,7 @@
     "start": "nodemon ./src/server.js --exec babel-node -e js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-prebuild": "node ./postinstall.js && npm install",
-    "clear-db": "psql -f tempScripts.sql example postgres",
+    "migrate": "sequelize db:migrate",
     "build": "babel src/ -d lib/",
     "flow": "flow"
   },
@@ -23,6 +23,7 @@
     "graphql": "^0.8.2",
     "graphql-server-express": "^0.7.2",
     "graphql-tools": "^0.11.0",
+    "json-override": "^0.2.0",
     "lodash": "^4.17.4",
     "pg": "6.2.3",
     "sequelize": "^3.30.4"

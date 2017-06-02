@@ -5,9 +5,13 @@ TODO
 
 ## Development
 
+Install postgres https://www.postgresql.org/download/
+Then change sequelize/config.js
+
 Simply run
 ```
 npm install
+npm migrate
 npm start
 ```
 

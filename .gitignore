@@ -5,4 +5,4 @@ node_modules
 .vscode
 typings
 
-.*config-override.json
+*config-override.json

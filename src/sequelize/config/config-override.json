@@ -1,7 +1,0 @@
-{
-  "_description": "Overrides default settings when connecting to db. You may need to run `npm run migrate` again",
-  "development": {},
-  "dev-heroku": {},
-  "test": {},
-  "production": {}
-}

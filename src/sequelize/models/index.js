@@ -5,13 +5,18 @@ var path      = require('path');
 var Sequelize = require('sequelize');
 var basename  = path.basename(module.filename);
 var env       = process.env.NODE_ENV || 'development';
-var configBase    = require(__dirname + '/../config/config.json')[env];
-var configOverride    = require(__dirname + '/../config/config-override.json')[env];
+
+let config = {};
+
+let configOverrideDir = __dirname + '/../config/config-override.json';
+if(fs.existsSync(configOverrideDir)) {
+  config = require(configOverrideDir)[env];
+} else {
+    config = require(__dirname + '/../config/config.json')[env];
+}
 
 var db        = {};
 var override = require('json-override');
-
-const config = override(configBase, configOverride, true);
 
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);

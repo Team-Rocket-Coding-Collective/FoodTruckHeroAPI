@@ -1,7 +1,13 @@
 var path = require('path')
+var fs = require('fs');
+
+const configOverride = path.resolve('src', 'sequelize', 'config', 'config-override.json');
+const configPath = fs.existsSync(configOverride)? configOverride: path.resolve('src', 'sequelize', 'config', 'config.json');
+
+console.log(configPath);
 
 module.exports = {
-  'config':          path.resolve('src', 'sequelize', 'config', 'config.json'),
+  'config':          configPath,
   'migrations-path': path.resolve('src', 'sequelize', 'migrations'),
   'models-path':     path.resolve('src', 'sequelize', 'models'),
   'seeders-path':    path.resolve('src', 'sequelize', 'seeders'),

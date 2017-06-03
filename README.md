@@ -6,10 +6,7 @@ TODO
 ## Development
 
 Install postgres https://www.postgresql.org/download/
-There are some default parameters in src/sequelize/config/config.json
-but you can override any of them by creating a config-override.json file in the same directory.
-
-Once you have that set up properly
+You can change any property you want in src/sequelize/config/config-override.json
 
 Simply run
 ```

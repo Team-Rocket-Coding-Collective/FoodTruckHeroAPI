@@ -15,6 +15,7 @@
     "Food Truck",
     "Food Truck Hero API"
   ],
+  "preinstall": "cp -n src/sequelize/config/config.json src/sequelize/config/config-override.json",
   "author": "psilospore",
   "license": "MIT",
   "dependencies": {

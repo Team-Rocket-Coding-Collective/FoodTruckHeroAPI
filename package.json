@@ -27,7 +27,7 @@
     "json-override": "^0.2.0",
     "lodash": "^4.17.4",
     "pg": "6.2.3",
-    "sequelize": "^3.30.4",
+    "sequelize": "^3.30.4"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

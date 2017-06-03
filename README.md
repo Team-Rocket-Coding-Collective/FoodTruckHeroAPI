@@ -6,16 +6,19 @@ TODO
 ## Development
 
 Install postgres https://www.postgresql.org/download/
-Then change sequelize/config.js
+There are some default parameters in src/sequelize/config/config.json
+but you can override any of them by creating a config-override.json file in the same directory.
+
+Once you have that set up properly
 
 Simply run
 ```
 npm install
-npm migrate
+npm run migrate
 npm start
 ```
 
-Then checkout http://localhost:4000/graphiql
+Then go to http://localhost:4000/graphiql
 and you should have an interface to make queries
 If you're unfamilar with GraphQL then you should checkout this
 
@@ -38,16 +41,3 @@ mutation {
   }
 }
 ```
-
-
-### database
-I have a shared postgres instance in heroku but it might be unstable for us to all use it at the same time. Not sure what the best solution is for developing locally.
-
-I'm currently running my own instance as you can see in connectors.js
-
-GraphQL Document: graphql script that defines one or more operations and fragments
-operation: a query, mutation, or subscription
-
-A field a unit of data you are asking for. ends up as a JSON response data.
-
-Arguments: key value pairs attached to a specific field. Passed into server side executation of this field and affects how it's resolved. 

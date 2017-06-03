@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "API for Food Truck Hero",
   "main": "server.js",
+  "repository":{
+    "url": "https://github.com/Team-Rocket-Coding-Collective/FoodTruckHero"
+  },
   "scripts": {
     "start": "nodemon ./src/server.js --exec babel-node -e js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-prebuild": "node ./postinstall.js && npm install",
     "migrate": "sequelize db:migrate",
     "build": "babel src/ -d lib/",
-    "flow": "flow"
+    "flow": "flow",
+    "stop": "pkill --signal SIGINT foodtruck-hero-api"
   },
   "keywords": [
     "Food Truck",
@@ -27,6 +31,7 @@
     "json-override": "^0.2.0",
     "lodash": "^4.17.4",
     "pg": "6.2.3",
+    "process-title": "^1.0.0",
     "sequelize": "^3.30.4"
   },
   "devDependencies": {

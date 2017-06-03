@@ -9,7 +9,7 @@
   "scripts": {
     "start": "nodemon ./src/server.js --exec babel-node -e js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-prebuild": "node ./postinstall.js && npm install",
+    "heroku-prebuild": "npm install",
     "migrate": "sequelize db:migrate",
     "build": "babel src/ -d lib/",
     "flow": "flow",

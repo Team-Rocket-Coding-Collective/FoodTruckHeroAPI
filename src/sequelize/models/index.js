@@ -16,7 +16,6 @@ if(fs.existsSync(configOverrideDir)) {
 }
 
 var db        = {};
-var override = require('json-override');
 
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable], {

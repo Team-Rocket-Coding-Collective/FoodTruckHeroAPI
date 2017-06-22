@@ -33,6 +33,8 @@ type Query {
 type Mutation {
     addUser(name: String!, email: String!, userType: String): User
     addFoodTruck(name: String!, ownerId: Int!, latitude: Float, longitude: Float, cusineTypes: [String], diets: [String], tags: [String], website: String, twitter: String): FoodTruck
+
+    updateFoodTruck(id: Int!, name: String, latitude: Float, longitude: Float, cusineTypes: [String], diets: [String], tags: [String], website: String, twitter: String): FoodTruck
 }
 
 `;

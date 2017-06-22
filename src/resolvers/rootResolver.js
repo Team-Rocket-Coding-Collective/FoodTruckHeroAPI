@@ -4,6 +4,7 @@ import { User, FoodTruck } from '../sequelize/models/index';
 import type { UserType, FoodTruckType } from '../types';
 
 // TODO get connects from context instead
+// TODO consider moving resolvers outside
 
 export const resolvers = {
     Query: {
@@ -31,9 +32,19 @@ export const resolvers = {
             const foodTruckPromise = FoodTruck.create(args);
             // TODO try to preload owner
             return foodTruckPromise.then((foodTruck) => foodTruck.getOwner().then(owner => {
-                foodTruck.owner = owner;
-                return foodTruck;
+                return {
+                    ...foodTruck,
+                    owner,
+                };
             }));
+        },
+        updateFoodTruck: (root, args): FoodTruckType => {
+            console.log(args.id);
+            return FoodTruck.findAll({
+                include: [
+                    {model: User, as: 'owner'}
+                ],
+            });
         },
     }
 }

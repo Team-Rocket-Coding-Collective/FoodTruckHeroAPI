@@ -5,6 +5,8 @@ TODO
 
 ## Development
 
+Copy the base.ini file and name it local.ini. Fill in the values suitable for your local development. To use the Twitter API, you will need to create an app in the Twitter API console, and generate an access token.
+
 Install postgres https://www.postgresql.org/download/
 You can change any property you want in src/sequelize/config/config-override.json
 

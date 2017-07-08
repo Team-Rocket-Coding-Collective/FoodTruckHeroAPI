@@ -29,6 +29,7 @@
     "graphql-server-express": "^0.7.2",
     "graphql-tools": "^0.11.0",
     "lodash": "^4.17.4",
+    "path": "^0.12.7",
     "pg": "6.2.3",
     "process-title": "^1.0.0",
     "sequelize": "^3.30.4",

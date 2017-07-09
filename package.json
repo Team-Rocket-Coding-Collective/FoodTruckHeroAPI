@@ -33,7 +33,8 @@
     "pg": "6.2.3",
     "process-title": "^1.0.0",
     "sequelize": "^3.30.4",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.3",
+    "twitter": "^1.7.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
